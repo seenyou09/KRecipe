@@ -43,7 +43,7 @@ class rec_sys:
         return recommendation
 
 if __name__ == "__main__":
-    df_recipes = pd.read_excel('/Users/seanyoo/Desktop/korean_food_project/xlsx/kreciepe.xlsx')
+    df_recipes = pd.read_excel('/Users/seanyoo/Desktop/KRecipe/xlsx/kreciepe.xlsx')
     category ="side dish"
     trial = rec_sys(10, "beef, rice, soup",category, df_recipes)
     yes = trial.get_recommendations()

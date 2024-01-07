@@ -9,15 +9,11 @@ Created on Sat May 27 18:40:33 2023
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-
-
-
-
 source = requests.get("https://www.maangchi.com/recipes").text
 soup = BeautifulSoup(source, 'html.parser')
 articles = soup.find_all("div", class_="module recipes-by-taxomony")
 
-#find indivudal category 
+#find indiviudal category 
 def getCategory(articles):
 
     category_link = []
@@ -28,9 +24,6 @@ def getCategory(articles):
             category_link.append(link)
             
     return category_link
-
-    
-
 
 
 
@@ -92,7 +85,7 @@ if __name__ == "__main__":
             recipe_info = get_info(i)
             data.append(recipe_info)  # Append recipe information to the list
     df = pd.DataFrame(data, columns=["English Name", "Korean Name", "Ingredients", "Type", "Video"])
-    df.to_excel("yes.xlsx")
+    df.to_excel("kreciepe.xlsx")
     print("finish")
     
     

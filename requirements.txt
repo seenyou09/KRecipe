@@ -1,1 +1,18 @@
+# requirements.txt
+
+# Specific package versions, if needed
+scikit-learn
+unidecode
+astroid
 altair<5
+streamlit_pandas
+beautifulsoup4
+requests
+nltk
+# You can add more packages as needed
+
+# To install, users would run:
+# python -m venv myenv
+# source myenv/bin/activate  # on Unix-like systems
+# myenv\Scripts\activate     # on Windows
+# pip install -r requirements.txt

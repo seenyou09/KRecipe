@@ -2,6 +2,7 @@
 import streamlit as st 
 import pandas as pd
 import streamlit_pandas as sp
+import altair as altcd 
 
 from rec_sys import rec_sys
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -12,7 +13,7 @@ import unidecode, ast
 #Cache csv fil
 @st.cache_data()
 def loadKnn():
-    output = pd.read_excel('//Users/seanyoo/Desktop/korean_food_project/xlsx/kreciepe.xlsx')
+    output = pd.read_excel('/Users/seanyoo/Desktop/KRecipe/xlsx/kreciepe.xlsx')
     return output
 
 
