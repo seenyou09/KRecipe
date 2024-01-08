@@ -11,6 +11,7 @@ streamlit_pandas
 beautifulsoup4
 requests
 nltk
+
 # You can add more packages as needed
 
 # To install, users would run:
