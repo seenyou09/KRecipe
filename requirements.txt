@@ -2,6 +2,8 @@
 
 # Specific package versions, if needed
 scikit-learn
+openpyxl
+Image
 unidecode
 astroid
 altair<5

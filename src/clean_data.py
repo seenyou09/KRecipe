@@ -1,8 +1,10 @@
+# This script is a data preprocessing pipeline for a Korean recipe dataset, focusing on cleaning and preparing the data for further analysis or application in a machine learning model. The cleaning steps involve handling text data, removing duplicates, and creating new columns with parsed and cleaned information.
+
 import pandas as pd
 import nltk
 vocabulary = nltk.FreqDist()
 
-df = pd.read_excel('/Users/seanyoo/Desktop/korean_food_project/xlsx/koreanFood_data.xlsx')
+df = pd.read_excel('/Users/seanyoo/Desktop/KRecipe/xlsx/koreanFood_data.xlsx')
 df = df.drop("Unnamed: 0", axis=1)
 df =df.dropna()
 df.head(10)
@@ -11,8 +13,6 @@ df.head(10)
 def clean_text(ingredient_str):
     ingredient_list = [item.strip(" ' ") for item in ingredient_str.strip("[]").split(",")]
     return ingredient_list
-
-
 
 #ingredient parser 
 def ingredient_parser(ingredients):
@@ -25,7 +25,7 @@ def ingredient_parser(ingredients):
         else:
             pass
     
-    ingred_str = " ".join(ingred_list)
+    ingred_str = ", ".join(ingred_list)
     
     return ingred_str
 

@@ -1,10 +1,9 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Sat May 27 18:40:33 2023
 
-@author: seanyoo
-"""
+# This Python script is a web scraper that extracts Korean recipes information from the website "maangchi.com" and saves the data into an Excel file. Let's break down the key components:
+# Note:
+
+# The script is structured in a way that it collects recipe information from various categories and compiles it into a single Excel file.
+# It handles exceptions for missing data (e.g., Korean name, ingredients, type) by setting defaults or leaving them empty.
 
 from bs4 import BeautifulSoup
 import requests
